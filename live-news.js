@@ -4,6 +4,7 @@
   function init(){
     const status=document.querySelector(".status span:last-child");if(status)status.textContent="官方 RSS 新闻 · 暂无可核验榜单";
     const home=document.querySelector("#page-home"),news=document.querySelector("#page-news"),ranking=document.querySelector("#page-rankings");
+    const sourceStat=[...document.querySelectorAll(".stat")].find(n=>n.querySelector(".label")?.textContent.includes("实时数据源"));if(sourceStat){sourceStat.querySelector(".label").textContent="官方新闻源";sourceStat.querySelector(".num").textContent="2";sourceStat.querySelector(".foot").textContent="OpenAI News、Google AI"}
     if(home){
       const h=home.querySelector(".section-head");
       if(h){h.querySelector("h2").textContent="官方最新动态";h.querySelector("p").textContent="仅显示官方 RSS 原文标题、链接和发布时间"}
