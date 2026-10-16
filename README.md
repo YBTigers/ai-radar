@@ -5,6 +5,12 @@
 ## 文件
 - `index.html`：网站页面与交互。
 
+## 第二阶段：官方新闻来源
+- `api/news.js`：在 Vercel 服务端读取 OpenAI News 与 Google AI 官方 RSS；不需要 API 密钥。
+- `live-news.js`：把官方动态与常青学习示例分开展示，显示来源、原文链接和发布时间。
+- RSS 暂不可用时显示空状态，不用演示内容填充；当前未接入公开模型评测数据，因此不展示排行榜分数或名次。
+- 接入的官方来源：`https://openai.com/news/rss.xml`、`https://blog.google/innovation-and-ai/technology/ai/rss/`。
+
 ## 部署到 Vercel
 1. 将 `index.html` 上传到 GitHub 新仓库的根目录。
 2. 在 Vercel 中选择 Add New / Project，导入该 GitHub 仓库。
