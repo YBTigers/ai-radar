@@ -121,5 +121,6 @@ document.getElementById('newsSearch').addEventListener('input',renderNews);docum
 document.getElementById('searchBtn').addEventListener('click',()=>{let q=document.getElementById('globalSearch').value.trim();if(!q){showToast('输入模型、公司或 AI 概念开始搜索');return}document.getElementById('modelSearch').value=q;document.getElementById('learnSearch').value=q;renderModels();renderLessons();go('models');showToast('已在模型库中搜索：'+q)});document.getElementById('globalSearch').addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('searchBtn').click()});document.getElementById('modelA').addEventListener('change',refreshCompareInfo);document.getElementById('modelB').addEventListener('change',refreshCompareInfo);document.getElementById('compareBtn').addEventListener('click',compare);document.getElementById('aboutBtn').addEventListener('click',()=>showToast('当前是交互原型：新闻、榜单与模型条目均为演示内容，尚未连接实时数据源。'));document.getElementById('evalInfo').addEventListener('click',()=>showToast('真实任务评测应锁定模型版本、统一输入、评分标准、成本和测试日期。'));document.getElementById('newsSort').addEventListener('change',()=>showToast('当前新闻为演示内容，排序仅展示交互入口。'));
 renderNews();renderModels();renderRank('overall');renderLessons();setupCompare();
 </script>
+<script src="/live-news.js"></script>
 </body>
 </html>
